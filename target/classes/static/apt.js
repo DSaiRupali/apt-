@@ -1,4 +1,5 @@
 
+//dark mode
 function toggleMode() {
     document.body.classList.toggle("d_m");
 
@@ -13,3 +14,4 @@ function toggleMode() {
         icon.innerHTML = "&#127769; &#8226;";
     }
 }
+//side menu open and close

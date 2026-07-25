@@ -1,812 +1,372 @@
-/* =========================
-   BODY
-========================= */
-
 body {
-
     position: relative;
-
     transition: 0.3s;
-
     background-image: url("paul-hanaoka-5Za2sS955yg-unsplash.jpg");
-
     margin: 0;
-
     min-height: 100vh;
-
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
-
 }
-
-
-/* =========================
-   TOP BAR
-========================= */
-
 .top {
-
     width: 100%;
-
     height: 50px;
-
     background-color: rgba(248, 247, 247, 0.9);
-
     display: flex;
-
     align-items: center;
-
     overflow: hidden;
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     z-index: 10;
-
 }
-
-
-/* =========================
-   MENU BUTTON
-========================= */
 
 .mb {
-
     font-size: 35px;
-
     cursor: pointer;
-
-    margin-left: 20px;
-
+    margin-left: 10px;
     flex-shrink: 0;
-
     z-index: 2;
-
 }
-
-
-/* =========================
-   MOVING TEXT AREA
-========================= */
-
 .moving-area {
-
     position: absolute;
-
     left: 75px;
-
     right: 110px;
-
     overflow: hidden;
-
     white-space: nowrap;
-
 }
-
-
-/* =========================
-   MOVING TEXT
-========================= */
-
 .moving-text {
-
     font-size: 20px;
-
     font-weight: bold;
-
     white-space: nowrap;
-
     display: inline-block;
-
     animation: moveText 20s linear infinite;
-
 }
-
-
 @keyframes moveText {
-
-    from {
-
+   from {
         transform: translateX(100vw);
-
     }
-
     to {
-
         transform: translateX(-100%);
-
     }
-
 }
-
-
-/* =========================
-   DARK MODE BUTTON
-========================= */
-
-.dm {
-
-    background-color: rgb(3, 0, 44);
-
-    right: 20px;
-
-    top: 10px;
-
-    font-size: 20px;
-
-    width: 70px;
-
-    border-radius: 35px;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    position: fixed;
-
-    height: 27px;
-
-    padding: 4px;
-
-    transition: 0.3s;
-
-    z-index: 20;
-
+.dm{
+    position:fixed;
+    top:10px;
+    right:20px;
+    width:70px;
+    height:32px;
+    border-radius:20px;
+    background:#03103d;
+    cursor:pointer;
+    transition:.3s;
+    z-index:100;
 }
-
-
-.dm span {
-
-    color: wheat;
-
-    font-size: 20px;
-
-    border-radius: 10%;
-
+.slider{
+    position:absolute;
+    top:3px;
+    left:3px;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:white;
+    transition:.35s;
 }
-
-
-/* =========================
-   SIDE MENU
-========================= */
-
+.dm span{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    line-height:32px;
+    font-size:18px;
+    pointer-events:none;
+}
+body.dark .dm{
+    background:#f0c419;
+}
+body.dark .slider{
+    transform:translateX(38px);
+}
 .side {
-
     position: fixed;
-
     top: 50px;
-
     left: 0;
-
     width: 50px;
-
     height: calc(100vh - 50px);
-
     background-color: rgba(248, 247, 247, 0.9);
-
     overflow: hidden;
-
     transition: 0.3s;
-
     z-index: 5;
-
 }
-
-
 .side.open {
-
     width: 300px;
-
 }
-
-
 .side a {
-
     font-size: 25px;
-
     color: black;
-
     display: flex;
-
     align-items: center;
-
     gap: 15px;
-
     text-decoration: none;
-
     padding: 10px 5px;
-
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
     font-family: 'Times New Roman', Times, serif;
-
 }
-
-
 .side a:hover {
-
     color: black;
-
     background-color: lightgray;
-
     border-radius: 5px;
-
 }
-
-
 .side.open .name {
-
     display: inline;
-
 }
-
-
 .name {
-
-    display: none;
-
+   display: none;
     white-space: nowrap;
-
 }
-
-
 .emoji {
-
     font-size: 30px;
-
     min-width: 35px;
-
     text-align: center;
-
 }
-
-
-/* =========================
-   EMERGENCY PAGE CONTENT
-========================= */
-
 .main-content {
-
-    margin-left: 50px;
-
+   margin-left: 50px;
     padding: 80px 30px 30px;
-
 }
-
-
 .main-content h1 {
-
     text-align: center;
-
     color: white;
-
     text-shadow: 2px 2px 5px black;
-
 }
-
-
 .services-container {
-
-    display: grid;
-
+   display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 30px;
-
     max-width: 1200px;
-
     margin: auto;
-
 }
-
-
 .service-section h2 {
-
     text-align: center;
-
     color: white;
-
     background-color: rgba(3, 0, 44, 0.95);
-
     padding: 15px;
-
     border-radius: 10px;
-
 }
-
-
 .service-box {
-
     background-color: rgba(255, 255, 255, 0.95);
-
     padding: 20px;
-
     margin: 15px 0;
-
     border-radius: 12px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
 }
-
-
 .service-box h3 {
-
     margin-top: 0;
-
     font-size: 23px;
-
 }
-
-
 .service-box p {
-
     font-size: 17px;
-
 }
-
-
 .call-button {
-
     display: inline-block;
-
     padding: 10px 18px;
-
     background-color: green;
-
     color: white;
-
     text-decoration: none;
-
     border-radius: 6px;
-
     font-weight: bold;
-
 }
-
-
 .call-button:hover {
-
     background-color: darkgreen;
-
 }
-
-
-/* =========================
-   DARK MODE
-========================= */
-
 body.dark {
-
     background-color: #222;
-
 }
-
-
 body.dark .top {
-
-    background-color: #222;
-
+    background-color: #2e2e2e;
+    color: beige;
 }
-
-
 body.dark .side {
-
     background-color: #333;
-
+    color: azure;
 }
-
-
 body.dark .side a {
-
     color: white;
-
 }
-
-
+.dark .side a:hover {
+    color: rgb(24, 16, 16);
+    background-color: rgb(107, 105, 105);
+    border-radius: 5px;
+}
 body.dark .service-box {
-
     background-color: #333;
-
     color: white;
-
 }
-
-
-/* =========================
-   MOBILE VIEW
-========================= */
-
 @media (max-width: 700px) {
-
     .services-container {
-
         grid-template-columns: 1fr;
-
     }
-
 }
-/* =========================
-   HOME PAGE SLOGAN
-========================= */
 
 .slogan {
-
     position: absolute;
-
     top: 50%;
-
     right: 12%;
-
     transform: translateY(-50%);
-
     background-color: rgba(3, 0, 44, 0.95);
-
     color: white;
-
     padding: 30px 45px;
-
     border-radius: 15px;
-
     text-align: center;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-
 }
-
-
-/* WE'RE - BIG AND ONLY ONCE */
-
 .were {
-
     font-size: 60px;
-
     font-weight: bold;
-
     letter-spacing: 3px;
-
 }
-
-
-/* NOT JUST A COLONY */
-
 .not-just {
-
     font-size: 25px;
-
     font-weight: normal;
-
     margin-top: -5px;
-
     letter-spacing: 2px;
-
 }
-
-
-/* WE'RE FAMILY */
-
 .family {
-
     font-family: cursive;
-
     font-size: 48px;
-
     font-weight: bold;
-
     margin-top: 5px;
-
 }
-/* =========================
-   RESOURCES PAGE
-========================= */
 
 .resources-content {
-
     margin-left: 50px;
-
     padding: 80px 30px 40px;
-
 }
-
-
-/* INFORMATION AT THE TOP */
-
 .resources-info {
-
     max-width: 1000px;
-
     margin: 0 auto 30px;
-
     padding: 20px;
-
     text-align: center;
-
     font-size: 22px;
-
     font-weight: bold;
-
     color: white;
-
     background-color: rgba(3, 0, 44, 0.95);
-
     border-radius: 12px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-
 }
-
-
-/* EACH RESOURCE */
-
 .resource-item {
-
     max-width: 1000px;
-
     margin: 30px auto;
-
     text-align: center;
-
 }
-
-
-/* RESOURCE NAME */
-
 .resource-item h2 {
-
     margin: 0;
-
     padding: 15px;
-
     color: white;
-
     background-color: rgba(3, 0, 44, 0.95);
-
     border-radius: 10px 10px 0 0;
-
     font-size: 28px;
-
 }
-
-
-/* RESOURCE IMAGE */
-
 .resource-item img {
-
     display: block;
-
     width: 100%;
-
     max-height: 450px;
-
     object-fit: cover;
-
     border-radius: 0 0 10px 10px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-
 }
-
-
-/* BOTTOM MESSAGE */
-
 .complaint-message {
-
     max-width: 1000px;
-
     margin: 50px auto 20px;
-
     padding: 20px;
-
     text-align: center;
-
     font-size: 20px;
-
     font-weight: bold;
-
     color: white;
-
     background-color: rgba(3, 0, 44, 0.95);
-
     border-radius: 12px;
-
 }
-
-
-/* DARK MODE */
-
 body.dark .resources-info,
-
 body.dark .resource-item h2,
-
 body.dark .complaint-message {
-
     background-color: #222;
-
 }
-
-
-/* MOBILE VIEW */
-
 @media (max-width: 700px) {
-
     .resources-content {
-
         margin-left: 50px;
-
         padding: 75px 15px 30px;
-
     }
-
-
     .resources-info {
-
         font-size: 17px;
-
     }
-
-
     .resource-item h2 {
-
         font-size: 22px;
-
     }
-
 }
-/* =========================
-   COMPLAINTS PAGE
-========================= */
 
 .complaints-content {
-
     margin-left: 50px;
-
     padding: 100px 30px 30px;
-
 }
-
-
 .complaints-content h1 {
-
     text-align: center;
-
     color: white;
-
     text-shadow: 2px 2px 5px black;
-
 }
-
-
 .complaints-container {
-
     display: flex;
-
     justify-content: center;
-
     gap: 40px;
-
     margin-top: 50px;
-
     flex-wrap: wrap;
-
 }
-
-
 .complaint-card {
-
     width: 300px;
-
     min-height: 220px;
-
     padding: 30px;
-
     text-align: center;
-
     text-decoration: none;
-
     color: white;
-
     background-color: rgba(3, 0, 44, 0.95);
-
     border-radius: 15px;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-
     transition: 0.3s;
-
 }
-
-
 .complaint-card:hover {
-
     transform: scale(1.05);
-
     background-color: rgba(10, 5, 70, 0.98);
-
 }
-
-
 .complaint-icon {
-
     font-size: 50px;
-
 }
-
-
 .complaint-card h2 {
-
     font-size: 24px;
-
 }
-
-
 .complaint-card p {
-
     font-size: 17px;
-
 }
-
-
 @media (max-width: 700px) {
-
     .complaints-container {
-
         flex-direction: column;
-
         align-items: center;
-
     }
-
 }
-/* =========================
-   ANNOUNCEMENTS PAGE
-========================= */
-
 .announcements-content {
-
     margin-left: 50px;
-
     padding: 100px 30px 30px;
-
 }
-
-
 .announcements-content h1 {
-
     text-align: center;
-
     color: white;
-
     text-shadow: 2px 2px 5px black;
-
 }
-
-
 .no-announcements {
-
     max-width: 700px;
-
     margin: 50px auto;
-
     padding: 40px;
-
     text-align: center;
-
     font-size: 25px;
-
     font-weight: bold;
-
     color: white;
-
     background-color: rgba(3, 0, 44, 0.95);
-
     border-radius: 15px;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-
 }

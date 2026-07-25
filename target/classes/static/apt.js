@@ -28,3 +28,27 @@ const sideMenu = document.getElementById("sideMenu");
 menuButton.addEventListener("click", function () {
  sideMenu.classList.toggle("open");
 });
+function submitComplaint(){
+
+    let name=document.getElementById("name").value.trim();
+    let road=document.getElementById("road").value.trim();
+    let plot=document.getElementById("plot").value.trim();
+    let complaint=document.getElementById("complaint").value.trim();
+
+    if(name==""||road==""||plot==""||complaint==""){
+
+        alert("Please fill all the fields.");
+
+        return;
+
+    }
+
+    document.getElementById("success-message").innerHTML=
+    "✅ Complaint Registered Successfully!";
+
+    document.getElementById("name").value="";
+    document.getElementById("road").value="";
+    document.getElementById("plot").value="";
+    document.getElementById("complaint").value="";
+
+}

@@ -7,24 +7,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Complaints</title>
+    <title>Register Complaint</title>
 
     <link rel="stylesheet" href="apt.css">
 
 </head>
 
-
 <body>
-
 
     <!-- TOP BAR -->
 
     <div class="top">
 
-        <span class="mb" onclick="toggleMenu()">
+        <span class="mb">
             &#9776;
         </span>
-
 
         <div class="moving-area">
 
@@ -34,17 +31,15 @@
 
         </div>
 
-
         <div class="dm" onclick="toggleMode()">
 
-    <div class="slider" id="slider"></div>
+            <div class="slider"></div>
 
-    <span id="icon">🌙</span>
+            <span id="icon">🌙</span>
 
-</div>
+        </div>
 
     </div>
-
 
     <!-- SIDE MENU -->
 
@@ -77,55 +72,55 @@
 
     </div>
 
-    <main class="complaints-content">
+    <!-- REGISTER COMPLAINT -->
 
+    <main class="register-page">
 
-        <h1>
-            Complaints
-        </h1>
+        <div class="register-card">
 
+            <h1>📝 Register Complaint</h1>
 
-        <div class="complaints-container">
+            <p class="subtitle">
+                Help us resolve your issue quickly.
+            </p>
 
-            <a href="register.html" class="complaint-card">
+            <h3>👤 Resident Details</h3>
 
-                <div class="complaint-icon">
-                    📝
-                </div>
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name">
 
-                <h2>
-                    Register a Complaint
-                </h2>
+            <div class="row">
 
-                <p>
-                    Submit a new complaint or report an issue.
-                </p>
+                <input
+                    type="text"
+                    id="road"
+                    placeholder="Road Number">
 
-            </a>
+                <input
+                    type="text"
+                    id="plot"
+                    placeholder="Plot Number">
 
+            </div>
 
-            <a href="" class="complaint-card">
+            <h3>📝 Complaint Details</h3>
 
-                <div class="complaint-icon">
-                    📋
-                </div>
+            <textarea
+                id="complaint"
+                rows="7"
+                placeholder="Describe your complaint here..."></textarea>
 
-                <h2>
-                    View Complaints
-                </h2>
+            <button onclick="submitComplaint()">
+                Submit Complaint
+            </button>
 
-                <p>
-                    View the complaints registered by residents.
-                </p>
-
-            </a>
-
+            <p id="success-message"></p>
 
         </div>
 
-
     </main>
-
 
     <script src="apt.js"></script>
 

@@ -502,3 +502,159 @@ body.dark .service-box {
     margin-top: 5px;
 
 }
+/* =========================
+   RESOURCES PAGE
+========================= */
+
+.resources-content {
+
+    margin-left: 50px;
+
+    padding: 80px 30px 40px;
+
+}
+
+
+/* INFORMATION AT THE TOP */
+
+.resources-info {
+
+    max-width: 1000px;
+
+    margin: 0 auto 30px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background-color: rgba(3, 0, 44, 0.95);
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* EACH RESOURCE */
+
+.resource-item {
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    text-align: center;
+
+}
+
+
+/* RESOURCE NAME */
+
+.resource-item h2 {
+
+    margin: 0;
+
+    padding: 15px;
+
+    color: white;
+
+    background-color: rgba(3, 0, 44, 0.95);
+
+    border-radius: 10px 10px 0 0;
+
+    font-size: 28px;
+
+}
+
+
+/* RESOURCE IMAGE */
+
+.resource-item img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 0 0 10px 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* BOTTOM MESSAGE */
+
+.complaint-message {
+
+    max-width: 1000px;
+
+    margin: 50px auto 20px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background-color: rgba(3, 0, 44, 0.95);
+
+    border-radius: 12px;
+
+}
+
+
+/* DARK MODE */
+
+body.dark .resources-info,
+
+body.dark .resource-item h2,
+
+body.dark .complaint-message {
+
+    background-color: #222;
+
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 700px) {
+
+    .resources-content {
+
+        margin-left: 50px;
+
+        padding: 75px 15px 30px;
+
+    }
+
+
+    .resources-info {
+
+        font-size: 17px;
+
+    }
+
+
+    .resource-item h2 {
+
+        font-size: 22px;
+
+    }
+
+}
